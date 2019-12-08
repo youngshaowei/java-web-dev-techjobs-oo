@@ -60,6 +60,7 @@ public class JobTest {
         Assert.assertEquals("\nID: 14\nName: Name\nEmployer: Employer\nLocation: Location\nPosition Type: PositionType\nCore Competency: CoreCompetency\n", test_Job1.toString());
     }
 
+
     @Test
     public void ifEmptyShowDataNotAvailable() {
         test_Job4 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
