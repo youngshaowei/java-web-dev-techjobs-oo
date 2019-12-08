@@ -27,7 +27,6 @@ public class Job {
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
-        this.id = id;
     }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
@@ -39,6 +38,10 @@ public class Job {
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;
         return getId() == job.getId();
+    }
+
+    public String toString() {
+        return "\nID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " + this.getEmployer() + "\nLocation: " + this.getLocation() + "\nPosition Type: " + this.getPositionType() + "\nCore Competency: " + this.coreCompetency + "\n";
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
@@ -85,7 +88,7 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 }
